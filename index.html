@@ -159,6 +159,63 @@
         display: block;
       }
 
+      .sponsors-section {
+        margin-top: 30px;
+        padding-top: 25px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .sponsors-title {
+        text-align: center;
+        color: #a0a0a0;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+      }
+
+      .sponsors-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .sponsor-link {
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 12px;
+        padding: 15px 25px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 80px;
+      }
+
+      .sponsor-link:hover {
+        background: rgba(255, 255, 255, 0.12);
+        border-color: #f5576c;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(245, 87, 108, 0.25);
+      }
+
+      .sponsor-link img {
+        max-width: 140px;
+        max-height: 60px;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        filter: brightness(0.95);
+        transition: filter 0.3s ease;
+      }
+
+      .sponsor-link:hover img {
+        filter: brightness(1.1);
+      }
+
       @media (max-width: 640px) {
         .form-card {
           padding: 30px 20px;
@@ -166,6 +223,16 @@
 
         .logo-section h1 {
           font-size: 26px;
+        }
+
+        .sponsors-container {
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        .sponsor-link {
+          width: 100%;
+          text-align: center;
         }
       }
     </style>
@@ -266,6 +333,30 @@
             Register Now
           </button>
         </form>
+        <div class="sponsors-section">
+          <div class="sponsors-title">Our Sponsors</div>
+          <div class="sponsors-container">
+            <a
+              href="https://nextgenelectra.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="sponsor-link"
+            >
+              <img
+                src="https://nextgenelectra.netlify.app/assets/nxtgen-logo-removebg-preview.png"
+                alt=""
+              />
+            </a>
+            <a
+              href="https://lussolane.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="sponsor-link"
+            >
+              <img src="signal-2025-12-13-122148_004-removebg-preview.png" alt="" />
+            </a>
+          </div>
+        </div>
       </div>
     </div>
 

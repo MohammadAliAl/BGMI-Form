@@ -1,189 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BGMI Classic Showdown - Season 1</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap");
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BGMI Classic Showdown - Season 1</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap");
-
-    body {
-      font-family: "Cinzel", serif;
-      background: linear-gradient(180deg,
+      body {
+        font-family: "Cinzel", serif;
+        background: linear-gradient(
+          180deg,
           #0a0a0a 0%,
           #1a1410 50%,
-          #0a0a0a 100%);
-      background-size: 100% 200%;
-      animation: subtleGlow 10s ease-in-out infinite;
-    }
-
-    @keyframes subtleGlow {
-
-      0%,
-      100% {
-        background-position: 0% 0%;
+          #0a0a0a 100%
+        );
+        background-size: 100% 200%;
+        animation: subtleGlow 10s ease-in-out infinite;
       }
 
-      50% {
-        background-position: 0% 100%;
+      @keyframes subtleGlow {
+        0%,
+        100% {
+          background-position: 0% 0%;
+        }
+
+        50% {
+          background-position: 0% 100%;
+        }
       }
-    }
 
-    .gold-text {
-      color: #d4af87;
-      text-shadow: 0 0 20px rgba(212, 175, 135, 0.3);
-    }
+      .gold-text {
+        color: #d4af87;
+        text-shadow: 0 0 20px rgba(212, 175, 135, 0.3);
+      }
 
-    .gold-border {
-      border-color: #d4af87;
-    }
+      .gold-border {
+        border-color: #d4af87;
+      }
 
-    .separator-line {
-      width: 60px;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, #d4af87, transparent);
-    }
+      .separator-line {
+        width: 60px;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #d4af87, transparent);
+      }
 
-    input::placeholder {
-      color: #8b7355;
-    }
+      input::placeholder {
+        color: #8b7355;
+      }
 
-    .prize-card {
-      background: linear-gradient(135deg,
+      .prize-card {
+        background: linear-gradient(
+          135deg,
           rgba(212, 175, 135, 0.05),
-          rgba(212, 175, 135, 0.02));
-      border: 1px solid rgba(212, 175, 135, 0.3);
-      transition: all 0.3s ease;
-    }
+          rgba(212, 175, 135, 0.02)
+        );
+        border: 1px solid rgba(212, 175, 135, 0.3);
+        transition: all 0.3s ease;
+      }
 
-    .prize-card:hover {
-      border-color: #d4af87;
-      box-shadow: 0 0 30px rgba(212, 175, 135, 0.2);
-      transform: translateY(-5px);
-    }
+      .prize-card:hover {
+        border-color: #d4af87;
+        box-shadow: 0 0 30px rgba(212, 175, 135, 0.2);
+        transform: translateY(-5px);
+      }
 
-    .glow-button {
-      background: linear-gradient(90deg, #8b6914, #d4af87, #8b6914);
-      background-size: 200% 100%;
-      transition: all 0.4s ease;
-    }
+      .glow-button {
+        background: linear-gradient(90deg, #8b6914, #d4af87, #8b6914);
+        background-size: 200% 100%;
+        transition: all 0.4s ease;
+      }
 
-    .glow-button:hover {
-      background-position: 100% 0;
-      box-shadow: 0 0 30px rgba(212, 175, 135, 0.5);
-    }
-  </style>
-</head>
+      .glow-button:hover {
+        background-position: 100% 0;
+        box-shadow: 0 0 30px rgba(212, 175, 135, 0.5);
+      }
+    </style>
+  </head>
 
-<body class="min-h-screen text-gray-300">
-  <div class="max-w-6xl mx-auto px-4 py-8 md:py-12">
-    <!-- Header Section -->
-    <div class="text-center mb-12">
-      <!-- Sponsor Names -->
-      <div class="flex items-center justify-center gap-4 md:gap-8 mb-8 flex-wrap">
-        <span class="gold-text text-xl md:text-3xl tracking-[0.3em] font-light"><a href="https://lussolane.netlify.app/"
-            target="_blank" rel="noopener noreferrer" class="sponsor-link">
-            <img src="Logo.png" alt="LUSSOLANE" /> </a></span>
-        <span class="gold-text text-2xl md:text-4xl opacity-60">×</span>
-        <span class="gold-text text-xl md:text-3xl tracking-[0.3em] font-light"><a
-            href="https://nextgenelectra.netlify.app/" target="_blank" rel="noopener noreferrer" class="sponsor-link">
-            <img src="https://nextgenelectra.netlify.app/assets/nxtgen-logo-removebg-preview.png"
-              alt="NXTGEN ELECTRA" /> </a></span>
-      </div>
+  <body class="min-h-screen text-gray-300">
+    <div class="max-w-6xl mx-auto px-4 py-8 md:py-12">
+      <!-- Header Section -->
+      <div class="text-center mb-12">
+        <!-- Sponsor Names -->
+        <div class="max-w-6xl mx-auto px-4 py-6 sm:py-8 md:py-12">
+          <!-- Header Section -->
+          <div class="text-center mb-8 sm:mb-10 md:mb-12">
+            <!-- Sponsor Names -->
+            <div
+              class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 md:gap-8 flex-wrap"
+            >
+              <!-- LUSSOLANE -->
+              <a
+                href="https://lussolane.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center justify-center"
+              >
+                <img
+                  src="Logo.png"
+                  alt="LUSSOLANE"
+                  class="h-24 sm:h-12 md:h-16 lg:h-20 w-auto object-contain"
+                />
+              </a>
 
-      <!-- Main Title -->
-      <h1 class="gold-text text-4xl md:text-6xl font-bold tracking-wider mb-4">
-        BGMI CLASSIC<br />SHOWDOWN
-      </h1>
+              <!-- Cross Symbol -->
+              <span
+                class="text-yellow-400 text-xl sm:text-2xl md:text-4xl opacity-60"
+              >
+                ×
+              </span>
 
-      <!-- Season Tag -->
-      <div class="flex items-center justify-center gap-4 mb-8">
-        <div class="separator-line"></div>
-        <span class="gold-text text-sm md:text-base tracking-[0.3em]">SEASON 1</span>
-        <div class="separator-line"></div>
-      </div>
-
-      <!-- Info Banner -->
-      <div class="max-w-3xl mx-auto bg-black bg-opacity-40 border gold-border px-6 py-4 relative overflow-hidden">
-        <div class="absolute left-0 top-0 bottom-0 w-12 border-r gold-border transform -skew-x-12"></div>
-        <div class="absolute right-0 top-0 bottom-0 w-12 border-l gold-border transform skew-x-12"></div>
-        <p class="gold-text text-sm md:text-base tracking-wide">
-          Solo Room Match • Entry Fee ₹50 • Limited Slots
-        </p>
-      </div>
-    </div>
-
-    <!-- Registration Form -->
-    <div class="max-w-2xl mx-auto bg-black bg-opacity-60 border gold-border p-8 md:p-12 mb-12">
-      <h2 class="gold-text text-2xl md:text-3xl font-semibold text-center mb-3 tracking-wide">
-        REGISTER NOW
-      </h2>
-      <p class="text-gray-400 text-center mb-8 text-sm">
-        Fill out the form below to register for the BGMI Classic Showdown.
-      </p>
-
-      <div id="successMessage"
-        class="hidden bg-green-900 bg-opacity-30 border border-green-500 text-green-400 p-4 rounded mb-6 text-center">
-        Registration successful! Redirecting to WhatsApp...
-      </div>
-
-      <form id="registrationForm">
-        <!-- Hidden Fields -->
-        <input type="hidden" name="access_key" value="8e597062-5883-4e8e-aedf-31bd9296b0bb" />
-        <input type="hidden" name="subject" value="New BGMI Classic Showdown Registration" />
-        <input type="hidden" name="from_name" value="BGMI Classic Showdown" />
-
-        <!-- Player Name -->
-        <div class="mb-6">
-          <input type="text" id="playerName" name="player_name" placeholder="Player Name" required
-            class="w-full bg-black bg-opacity-40 border gold-border px-4 py-3 gold-text focus:outline-none focus:border-yellow-600 focus:bg-opacity-60 transition-all" />
-          <span id="playerNameError" class="hidden text-red-400 text-xs mt-1">Please enter your name</span>
+              <!-- NXTGEN ELECTRA -->
+              <a
+                href="https://nextgenelectra.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center justify-center"
+              >
+                <img
+                  src="https://nextgenelectra.netlify.app/assets/nxtgen-logo-removebg-preview.png"
+                  alt="NXTGEN ELECTRA"
+                  class="sm:h-12 md:h-16 lg:h-20 w-auto object-contain"
+                />
+              </a>
+            </div>
+          </div>
         </div>
 
-        <!-- BGMI ID -->
-        <div class="mb-6">
-          <input type="number" id="bgmiId" name="bgmi_id" placeholder="BGMI ID Number" required
-            class="w-full bg-black bg-opacity-40 border gold-border px-4 py-3 gold-text focus:outline-none focus:border-yellow-600 focus:bg-opacity-60 transition-all" />
-          <span id="bgmiIdError" class="hidden text-red-400 text-xs mt-1">Please enter a valid BGMI ID</span>
+        <!-- Main Title -->
+        <h1
+          class="gold-text text-4xl md:text-6xl font-bold tracking-wider mb-4"
+        >
+          BGMI CLASSIC<br />SHOWDOWN
+        </h1>
+
+        <!-- Season Tag -->
+        <div class="flex items-center justify-center gap-4 mb-8">
+          <div class="separator-line"></div>
+          <span class="gold-text text-sm md:text-base tracking-[0.3em]"
+            >SEASON 1</span
+          >
+          <div class="separator-line"></div>
         </div>
 
-        <!-- In-Game Name -->
-        <div class="mb-6">
-          <input type="text" id="inGameName" name="in_game_name" placeholder="BGMI In-Game Name" required
-            class="w-full bg-black bg-opacity-40 border gold-border px-4 py-3 gold-text focus:outline-none focus:border-yellow-600 focus:bg-opacity-60 transition-all" />
-          <span id="inGameNameError" class="hidden text-red-400 text-xs mt-1">Please enter your in-game name</span>
+        <!-- Info Banner -->
+        <div
+          class="max-w-3xl mx-auto bg-black bg-opacity-40 border gold-border px-6 py-4 relative overflow-hidden"
+        >
+          <div
+            class="absolute left-0 top-0 bottom-0 w-12 border-r gold-border transform -skew-x-12"
+          ></div>
+          <div
+            class="absolute right-0 top-0 bottom-0 w-12 border-l gold-border transform skew-x-12"
+          ></div>
+          <p class="gold-text text-sm md:text-base tracking-wide">
+            Solo Room Match • Entry Fee ₹50 • Limited Slots
+          </p>
         </div>
+      </div>
 
-        <!-- Phone Number -->
-        <div class="mb-8">
-          <input type="tel" id="phoneNumber" name="phone_number" placeholder="Phone Number" pattern="[0-9]{10}"
-            maxlength="10" required
-            class="w-full bg-black bg-opacity-40 border gold-border px-4 py-3 gold-text focus:outline-none focus:border-yellow-600 focus:bg-opacity-60 transition-all" />
-          <span id="phoneNumberError" class="hidden text-red-400 text-xs mt-1">Please enter a valid 10-digit phone
-            number</span>
-        </div>
-
-        <!-- Submit Button -->
-        <button type="submit" id="submitBtn"
-          class="w-full glow-button text-black font-semibold py-4 tracking-widest text-sm md:text-base hover:scale-[1.02] transition-all">
-          REGISTER FOR BGMI CLASSIC SHOWDOWN
-        </button>
-      </form>
-    </div>
-
-    <!-- Prize Pool Section -->
-    <div class="mb-12">
-      <div class="flex items-center justify-center gap-4 mb-8">
-        <div class="separator-line"></div>
-        <h2 class="gold-text text-2xl md:text-3xl font-semibold tracking-wide">
-          PRIZE POOL
+      <!-- Registration Form -->
+      <div
+        class="max-w-2xl mx-auto bg-black bg-opacity-60 border gold-border p-8 md:p-12 mb-12"
+      >
+        <h2
+          class="gold-text text-2xl md:text-3xl font-semibold text-center mb-3 tracking-wide"
+        >
+          REGISTER NOW
         </h2>
-        <div class="separator-line"></div>
+        <p class="text-gray-400 text-center mb-8 text-sm">
+          Fill out the form below to register for the BGMI Classic Showdown.
+        </p>
+
+        <div
+          id="successMessage"
+          class="hidden bg-green-900 bg-opacity-30 border border-green-500 text-green-400 p-4 rounded mb-6 text-center"
+        >
+          Registration successful! Redirecting to WhatsApp...
+        </div>
+
+        <form id="registrationForm">
+          <!-- Hidden Fields -->
+          <input
+            type="hidden"
+            name="access_key"
+            value="8e597062-5883-4e8e-aedf-31bd9296b0bb"
+          />
+          <input
+            type="hidden"
+            name="subject"
+            value="New BGMI Classic Showdown Registration"
+          />
+          <input type="hidden" name="from_name" value="BGMI Classic Showdown" />
+
+          <!-- Player Name -->
+          <div class="mb-6">
+            <input
+              type="text"
+              id="playerName"
+              name="player_name"
+              placeholder="Player Name"
+              required
+              class="w-full bg-black bg-opacity-40 border gold-border px-4 py-3 gold-text focus:outline-none focus:border-yellow-600 focus:bg-opacity-60 transition-all"
+            />
+            <span id="playerNameError" class="hidden text-red-400 text-xs mt-1"
+              >Please enter your name</span
+            >
+          </div>
+
+          <!-- BGMI ID -->
+          <div class="mb-6">
+            <input
+              type="number"
+              id="bgmiId"
+              name="bgmi_id"
+              placeholder="BGMI ID Number"
+              required
+              class="w-full bg-black bg-opacity-40 border gold-border px-4 py-3 gold-text focus:outline-none focus:border-yellow-600 focus:bg-opacity-60 transition-all"
+            />
+            <span id="bgmiIdError" class="hidden text-red-400 text-xs mt-1"
+              >Please enter a valid BGMI ID</span
+            >
+          </div>
+
+          <!-- In-Game Name -->
+          <div class="mb-6">
+            <input
+              type="text"
+              id="inGameName"
+              name="in_game_name"
+              placeholder="BGMI In-Game Name"
+              required
+              class="w-full bg-black bg-opacity-40 border gold-border px-4 py-3 gold-text focus:outline-none focus:border-yellow-600 focus:bg-opacity-60 transition-all"
+            />
+            <span id="inGameNameError" class="hidden text-red-400 text-xs mt-1"
+              >Please enter your in-game name</span
+            >
+          </div>
+
+          <!-- Phone Number -->
+          <div class="mb-8">
+            <input
+              type="tel"
+              id="phoneNumber"
+              name="phone_number"
+              placeholder="Phone Number"
+              pattern="[0-9]{10}"
+              maxlength="10"
+              required
+              class="w-full bg-black bg-opacity-40 border gold-border px-4 py-3 gold-text focus:outline-none focus:border-yellow-600 focus:bg-opacity-60 transition-all"
+            />
+            <span id="phoneNumberError" class="hidden text-red-400 text-xs mt-1"
+              >Please enter a valid 10-digit phone number</span
+            >
+          </div>
+
+          <!-- Submit Button -->
+          <button
+            type="submit"
+            id="submitBtn"
+            class="w-full glow-button text-black font-semibold py-4 tracking-widest text-sm md:text-base hover:scale-[1.02] transition-all"
+          >
+            REGISTER FOR BGMI CLASSIC SHOWDOWN
+          </button>
+        </form>
       </div>
 
-      <!-- <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      <!-- Prize Pool Section -->
+      <div class="mb-12">
+        <div class="flex items-center justify-center gap-4 mb-8">
+          <div class="separator-line"></div>
+          <h2
+            class="gold-text text-2xl md:text-3xl font-semibold tracking-wide"
+          >
+            PRIZE POOL
+          </h2>
+          <div class="separator-line"></div>
+        </div>
+
+        <!-- <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           1st Prize
           <div class="prize-card p-8 text-center">
             <div class="text-5xl mb-4">🏆</div>
@@ -217,231 +314,265 @@
           </div>
         </div>
       </div> -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-        <!-- 1st Prize -->
-        <div class="prize-card p-8 text-center">
-          <div class="prize-icon mb-6">
-            <img src="Trophy1.png" alt="">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <!-- 1st Prize -->
+          <div class="prize-card p-8 text-center">
+            <div class="prize-icon mb-6">
+              <img src="Trophy1.png" alt="" />
+            </div>
+            <h3 class="gold-text text-xl font-semibold mb-4 tracking-wider">
+              1ST PRIZE
+            </h3>
+            <p class="text-gray-300 mb-2">LUSSOLANE Outfit</p>
+            <p class="text-gray-400 text-sm">+</p>
+            <p class="text-gray-300">NXTGEN Electronic Product</p>
           </div>
-          <h3 class="gold-text text-xl font-semibold mb-4 tracking-wider">
-            1ST PRIZE
-          </h3>
-          <p class="text-gray-300 mb-2">LUSSOLANE Outfit</p>
-          <p class="text-gray-400 text-sm">+</p>
-          <p class="text-gray-300">NXTGEN Electronic Product</p>
+
+          <!-- 2nd Prize -->
+          <div class="prize-card p-8 text-center">
+            <div class="prize-icon mb-6">
+              <img src="Leather.png" alt="" />
+            </div>
+            <h3 class="gold-text text-xl font-semibold mb-4 tracking-wider">
+              2ND PRIZE
+            </h3>
+            <p class="text-gray-300 mb-2">LUSSOLANE Leather Jacket</p>
+            <p class="text-gray-400 text-sm">+</p>
+            <p class="text-gray-300">NXTGEN Electronic Product</p>
+          </div>
+
+          <!-- 3rd Prize -->
+          <div class="prize-card p-8 text-center">
+            <div class="prize-icon mb-6">
+              <img src="Gift.png" alt="" />
+            </div>
+            <h3 class="gold-text text-xl font-semibold mb-4 tracking-wider">
+              3RD PRIZE
+            </h3>
+            <p class="text-gray-300">NXTGEN</p>
+            <p class="text-gray-300">Electronic Product</p>
+          </div>
+        </div>
+        <!-- Sponsors Section -->
+        <br /><br />
+        <div class="text-center">
+          <div class="flex items-center justify-center gap-4 mb-6">
+            <div class="separator-line"></div>
+            <p class="gold-text text-sm tracking-widest opacity-70">
+              SPONSORED BY
+            </p>
+            <div class="separator-line"></div>
+          </div>
+
+          <div
+            class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 md:gap-16"
+          >
+            <!-- LUSSOLANE -->
+            <a
+              href="https://lussolane.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="transition-opacity hover:opacity-80"
+            >
+              <img
+                src="Logo.png"
+                alt="LUSSOLANE"
+                style="height: 10vh"
+                class="w-28 sm:w-36 md:w-44 object-contain"
+              />
+            </a>
+
+            <!-- Dash Divider -->
+            <span
+              class="text-yellow-400 text-xl sm:text-2xl md:text-3xl opacity-50"
+            >
+              —
+            </span>
+
+            <!-- NXTGEN ELECTRA -->
+            <a
+              href="https://nextgenelectra.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="transition-opacity hover:opacity-80"
+            >
+              <img
+                src="https://nextgenelectra.netlify.app/assets/nxtgen-logo-removebg-preview.png"
+                alt="NXTGEN ELECTRA"
+                class="w-28 sm:w-36 md:w-44 object-contain"
+                style="width: 30vh"
+              />
+            </a>
+          </div>
         </div>
 
-        <!-- 2nd Prize -->
-        <div class="prize-card p-8 text-center">
-          <div class="prize-icon mb-6">
-            <img src="Leather.png" alt="">
-          </div>
-          <h3 class="gold-text text-xl font-semibold mb-4 tracking-wider">
-            2ND PRIZE
-          </h3>
-          <p class="text-gray-300 mb-2">LUSSOLANE Leather Jacket</p>
-          <p class="text-gray-400 text-sm">+</p>
-          <p class="text-gray-300">NXTGEN Electronic Product</p>
-        </div>
-
-        <!-- 3rd Prize -->
-        <div class="prize-card p-8 text-center">
-          <div class="prize-icon mb-6">
-            <img src="Gift.png" alt="">
-          </div>
-          <h3 class="gold-text text-xl font-semibold mb-4 tracking-wider">
-            3RD PRIZE
-          </h3>
-          <p class="text-gray-300">NXTGEN</p>
-          <p class="text-gray-300">Electronic Product</p>
-        </div>
-      </div>
-      <!-- Sponsors Section -->
-      <br><br>
-      <div class="text-center">
-        <div class="flex items-center justify-center gap-4 mb-6">
-          <div class="separator-line"></div>
-          <p class="gold-text text-sm tracking-widest opacity-70">
-            SPONSORED BY
+        <!-- Footer Text -->
+        <div class="text-center mt-12">
+          <p class="text-gray-600 text-xs max-w-4xl mx-auto leading-relaxed">
+            All BGMI and BGMI-related trademarks and logos are the property of
+            their respective owners. This event is not affiliated with,
+            endorsed, sponsored, or specifically approved by KRAFTON, INC. or
+            its affiliates.
           </p>
-          <div class="separator-line"></div>
-        </div>
-
-        <div class="flex items-center justify-center gap-8 md:gap-16 flex-wrap">
-          <a href="https://lussolane.netlify.app/" target="_blank"
-            class="gold-text text-2xl md:text-3xl tracking-[0.3em] font-light hover:opacity-80 transition-opacity">
-            <img src="Logo.png" alt="LUSSOLANE" />
-          </a>
-          <span class="gold-text text-2xl opacity-40">|</span>
-          <a href="https://nextgenelectra.netlify.app/" target="_blank"
-            class="gold-text text-2xl md:text-3xl tracking-[0.3em] font-light hover:opacity-80 transition-opacity">
-            <img src="https://nextgenelectra.netlify.app/assets/nxtgen-logo-removebg-preview.png"
-              alt="NXTGEN ELECTRA" />
-          </a>
         </div>
       </div>
 
-      <!-- Footer Text -->
-      <div class="text-center mt-12">
-        <p class="text-gray-600 text-xs max-w-4xl mx-auto leading-relaxed">
-          All BGMI and BGMI-related trademarks and logos are the property of
-          their respective owners. This event is not affiliated with, endorsed,
-          sponsored, or specifically approved by KRAFTON, INC. or its
-          affiliates.
-        </p>
-      </div>
-    </div>
+      <script>
+        const form = document.getElementById("registrationForm");
+        const submitBtn = document.getElementById("submitBtn");
+        const successMessage = document.getElementById("successMessage");
 
-    <script>
-      const form = document.getElementById("registrationForm");
-      const submitBtn = document.getElementById("submitBtn");
-      const successMessage = document.getElementById("successMessage");
+        const WHATSAPP_NUMBER = "917836890583";
+        const WHATSAPP_MESSAGE =
+          "Hello%20I%20have%20registered%20for%20the%20BGMI%20Classic%20Showdown";
 
-      const WHATSAPP_NUMBER = "917836890583";
-      const WHATSAPP_MESSAGE =
-        "Hello%20I%20have%20registered%20for%20the%20BGMI%20Classic%20Showdown";
-
-      // Validation functions
-      function validateField(field, errorElement, validationFn) {
-        const isValid = validationFn(field.value);
-        if (!isValid) {
-          errorElement.classList.remove("hidden");
-          field.classList.add("border-red-500");
-          return false;
-        } else {
-          errorElement.classList.add("hidden");
-          field.classList.remove("border-red-500");
-          return true;
-        }
-      }
-
-      function validatePlayerName(value) {
-        return value.trim().length >= 2;
-      }
-
-      function validateBGMIId(value) {
-        return value.trim().length > 0 && !isNaN(value);
-      }
-
-      function validateInGameName(value) {
-        return value.trim().length >= 2;
-      }
-
-      function validatePhoneNumber(value) {
-        return /^[0-9]{10}$/.test(value);
-      }
-
-      const playerNameField = document.getElementById("playerName");
-      const bgmiIdField = document.getElementById("bgmiId");
-      const inGameNameField = document.getElementById("inGameName");
-      const phoneNumberField = document.getElementById("phoneNumber");
-
-      playerNameField.addEventListener("blur", () => {
-        validateField(
-          playerNameField,
-          document.getElementById("playerNameError"),
-          validatePlayerName
-        );
-      });
-
-      bgmiIdField.addEventListener("blur", () => {
-        validateField(
-          bgmiIdField,
-          document.getElementById("bgmiIdError"),
-          validateBGMIId
-        );
-      });
-
-      inGameNameField.addEventListener("blur", () => {
-        validateField(
-          inGameNameField,
-          document.getElementById("inGameNameError"),
-          validateInGameName
-        );
-      });
-
-      phoneNumberField.addEventListener("blur", () => {
-        validateField(
-          phoneNumberField,
-          document.getElementById("phoneNumberError"),
-          validatePhoneNumber
-        );
-      });
-
-      form.addEventListener("submit", async (e) => {
-        e.preventDefault();
-
-        const isPlayerNameValid = validateField(
-          playerNameField,
-          document.getElementById("playerNameError"),
-          validatePlayerName
-        );
-        const isBGMIIdValid = validateField(
-          bgmiIdField,
-          document.getElementById("bgmiIdError"),
-          validateBGMIId
-        );
-        const isInGameNameValid = validateField(
-          inGameNameField,
-          document.getElementById("inGameNameError"),
-          validateInGameName
-        );
-        const isPhoneNumberValid = validateField(
-          phoneNumberField,
-          document.getElementById("phoneNumberError"),
-          validatePhoneNumber
-        );
-
-        if (
-          !isPlayerNameValid ||
-          !isBGMIIdValid ||
-          !isInGameNameValid ||
-          !isPhoneNumberValid
-        ) {
-          return;
-        }
-
-        submitBtn.disabled = true;
-        submitBtn.textContent = "SUBMITTING...";
-
-        try {
-          const formData = new FormData(form);
-          const response = await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            body: formData,
-          });
-
-          const data = await response.json();
-
-          if (data.success) {
-            successMessage.classList.remove("hidden");
-            form.style.display = "none";
-
-            setTimeout(() => {
-              window.location.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`;
-            }, 2000);
+        // Validation functions
+        function validateField(field, errorElement, validationFn) {
+          const isValid = validationFn(field.value);
+          if (!isValid) {
+            errorElement.classList.remove("hidden");
+            field.classList.add("border-red-500");
+            return false;
           } else {
-            throw new Error("Submission failed");
+            errorElement.classList.add("hidden");
+            field.classList.remove("border-red-500");
+            return true;
           }
-        } catch (error) {
-          alert("Registration failed. Please try again.");
-          submitBtn.disabled = false;
-          submitBtn.textContent = "REGISTER FOR BGMI CLASSIC SHOWDOWN";
         }
-      });
 
-      bgmiIdField.addEventListener("keypress", (e) => {
-        if (!/[0-9]/.test(e.key) && e.key !== "Backspace") {
+        function validatePlayerName(value) {
+          return value.trim().length >= 2;
+        }
+
+        function validateBGMIId(value) {
+          return value.trim().length > 0 && !isNaN(value);
+        }
+
+        function validateInGameName(value) {
+          return value.trim().length >= 2;
+        }
+
+        function validatePhoneNumber(value) {
+          return /^[0-9]{10}$/.test(value);
+        }
+
+        const playerNameField = document.getElementById("playerName");
+        const bgmiIdField = document.getElementById("bgmiId");
+        const inGameNameField = document.getElementById("inGameName");
+        const phoneNumberField = document.getElementById("phoneNumber");
+
+        playerNameField.addEventListener("blur", () => {
+          validateField(
+            playerNameField,
+            document.getElementById("playerNameError"),
+            validatePlayerName
+          );
+        });
+
+        bgmiIdField.addEventListener("blur", () => {
+          validateField(
+            bgmiIdField,
+            document.getElementById("bgmiIdError"),
+            validateBGMIId
+          );
+        });
+
+        inGameNameField.addEventListener("blur", () => {
+          validateField(
+            inGameNameField,
+            document.getElementById("inGameNameError"),
+            validateInGameName
+          );
+        });
+
+        phoneNumberField.addEventListener("blur", () => {
+          validateField(
+            phoneNumberField,
+            document.getElementById("phoneNumberError"),
+            validatePhoneNumber
+          );
+        });
+
+        form.addEventListener("submit", async (e) => {
           e.preventDefault();
-        }
-      });
 
-      phoneNumberField.addEventListener("keypress", (e) => {
-        if (!/[0-9]/.test(e.key) && e.key !== "Backspace") {
-          e.preventDefault();
-        }
-      });
-    </script>
-</body>
+          const isPlayerNameValid = validateField(
+            playerNameField,
+            document.getElementById("playerNameError"),
+            validatePlayerName
+          );
+          const isBGMIIdValid = validateField(
+            bgmiIdField,
+            document.getElementById("bgmiIdError"),
+            validateBGMIId
+          );
+          const isInGameNameValid = validateField(
+            inGameNameField,
+            document.getElementById("inGameNameError"),
+            validateInGameName
+          );
+          const isPhoneNumberValid = validateField(
+            phoneNumberField,
+            document.getElementById("phoneNumberError"),
+            validatePhoneNumber
+          );
 
+          if (
+            !isPlayerNameValid ||
+            !isBGMIIdValid ||
+            !isInGameNameValid ||
+            !isPhoneNumberValid
+          ) {
+            return;
+          }
+
+          submitBtn.disabled = true;
+          submitBtn.textContent = "SUBMITTING...";
+
+          try {
+            const formData = new FormData(form);
+            const response = await fetch("https://api.web3forms.com/submit", {
+              method: "POST",
+              body: formData,
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+              successMessage.classList.remove("hidden");
+              form.style.display = "none";
+
+              setTimeout(() => {
+                window.location.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`;
+              }, 2000);
+            } else {
+              throw new Error("Submission failed");
+            }
+          } catch (error) {
+            alert("Registration failed. Please try again.");
+            submitBtn.disabled = false;
+            submitBtn.textContent = "REGISTER FOR BGMI CLASSIC SHOWDOWN";
+          }
+        });
+
+        bgmiIdField.addEventListener("keypress", (e) => {
+          if (!/[0-9]/.test(e.key) && e.key !== "Backspace") {
+            e.preventDefault();
+          }
+        });
+
+        phoneNumberField.addEventListener("keypress", (e) => {
+          if (!/[0-9]/.test(e.key) && e.key !== "Backspace") {
+            e.preventDefault();
+          }
+        });
+        document.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            link.classList.add("scale-95");
+            setTimeout(() => link.classList.remove("scale-95"), 150);
+          });
+        });
+      </script>
+    </div>
+  </body>
 </html>

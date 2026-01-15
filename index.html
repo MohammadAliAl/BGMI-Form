@@ -4,79 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BGMI Classic Showdown - Season 1</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap");
-
-      body {
-        font-family: "Cinzel", serif;
-        background: linear-gradient(
-          180deg,
-          #0a0a0a 0%,
-          #1a1410 50%,
-          #0a0a0a 100%
-        );
-        background-size: 100% 200%;
-        animation: subtleGlow 10s ease-in-out infinite;
-      }
-
-      @keyframes subtleGlow {
-        0%,
-        100% {
-          background-position: 0% 0%;
-        }
-
-        50% {
-          background-position: 0% 100%;
-        }
-      }
-
-      .gold-text {
-        color: #d4af87;
-        text-shadow: 0 0 20px rgba(212, 175, 135, 0.3);
-      }
-
-      .gold-border {
-        border-color: #d4af87;
-      }
-
-      .separator-line {
-        width: 60px;
-        height: 2px;
-        background: linear-gradient(90deg, transparent, #d4af87, transparent);
-      }
-
-      input::placeholder {
-        color: #8b7355;
-      }
-
-      .prize-card {
-        background: linear-gradient(
-          135deg,
-          rgba(212, 175, 135, 0.05),
-          rgba(212, 175, 135, 0.02)
-        );
-        border: 1px solid rgba(212, 175, 135, 0.3);
-        transition: all 0.3s ease;
-      }
-
-      .prize-card:hover {
-        border-color: #d4af87;
-        box-shadow: 0 0 30px rgba(212, 175, 135, 0.2);
-        transform: translateY(-5px);
-      }
-
-      .glow-button {
-        background: linear-gradient(90deg, #8b6914, #d4af87, #8b6914);
-        background-size: 200% 100%;
-        transition: all 0.4s ease;
-      }
-
-      .glow-button:hover {
-        background-position: 100% 0;
-        box-shadow: 0 0 30px rgba(212, 175, 135, 0.5);
-      }
-    </style>
   </head>
 
   <body class="min-h-screen text-gray-300">
@@ -575,4 +502,77 @@
       </script>
     </div>
   </body>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap");
+
+    body {
+      font-family: "Cinzel", serif;
+      background: linear-gradient(
+        180deg,
+        #0a0a0a 0%,
+        #1a1410 50%,
+        #0a0a0a 100%
+      );
+      background-size: 100% 200%;
+      animation: subtleGlow 10s ease-in-out infinite;
+    }
+
+    @keyframes subtleGlow {
+      0%,
+      100% {
+        background-position: 0% 0%;
+      }
+
+      50% {
+        background-position: 0% 100%;
+      }
+    }
+
+    .gold-text {
+      color: #d4af87;
+      text-shadow: 0 0 20px rgba(212, 175, 135, 0.3);
+    }
+
+    .gold-border {
+      border-color: #d4af87;
+    }
+
+    .separator-line {
+      width: 60px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #d4af87, transparent);
+    }
+
+    input::placeholder {
+      color: #8b7355;
+    }
+
+    .prize-card {
+      background: linear-gradient(
+        135deg,
+        rgba(212, 175, 135, 0.05),
+        rgba(212, 175, 135, 0.02)
+      );
+      border: 1px solid rgba(212, 175, 135, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .prize-card:hover {
+      border-color: #d4af87;
+      box-shadow: 0 0 30px rgba(212, 175, 135, 0.2);
+      transform: translateY(-5px);
+    }
+
+    .glow-button {
+      background: linear-gradient(90deg, #8b6914, #d4af87, #8b6914);
+      background-size: 200% 100%;
+      transition: all 0.4s ease;
+    }
+
+    .glow-button:hover {
+      background-position: 100% 0;
+      box-shadow: 0 0 30px rgba(212, 175, 135, 0.5);
+    }
+  </style>
 </html>
